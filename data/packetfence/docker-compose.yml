@@ -1,0 +1,8 @@
+pf:
+  image: comcloud/packetfence
+  #build: .
+  privileged: true
+  net: "host"
+  volumes:
+    - "/lib/modules/:/lib/modules/"
+  command: /usr/bin/supervisord
