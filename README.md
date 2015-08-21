@@ -13,6 +13,8 @@ The container will run __supervisord__ as main process in order to manage the ex
 
 This may sound like breaking the [Docker best practices](https://docs.docker.com/articles/dockerfile_best-practices/#run-only-one-process-per-container), but in this case the complete packetfence service must be considered as a unique service (although we know that is composed of other microservices). Packetfence interacts tightly with several processes and he wants to have the control, so it is not possible to have them in separate containers.
 
+Docker also explain [how to run several proceses in a container with __supervisor__](https://docs.docker.com/articles/using_supervisord/)
+
 Mysql is the only service that might be separated, but at the moment it's included to keep the Packetfence configuration simply.  In future releases it will be in a separate container and with data volumes.
 
 
