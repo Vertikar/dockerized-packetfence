@@ -1,6 +1,5 @@
 pf:
-  image: comcloud/packetfence
-  #build: .
+  image: josefuentes/packetfence
   privileged: true
   net: "host"
   volumes:
